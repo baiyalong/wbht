@@ -1,0 +1,23 @@
+body{
+	padding-top: 70px;/* 主要是为了阻止导航条掩盖头部内容 */
+}
+
+.navbar-brand{
+	color:white;
+}
+/* 
+.delFont{
+	font-family: 微软雅黑;
+	font-size:20px;
+	letter-spacing: 3px;
+	color:red;
+} */
+
+/* .delButton  a + a{
+	margin-left:10px;
+} */
+
+.chooseBtn{
+	width:80%;
+	height:60px;
+}

@@ -1,0 +1,94 @@
+.systemTable{
+	margin:0 auto;
+	text-align: center;
+}
+
+.sycaidan{
+	height:5px;
+}
+
+img{
+	margin:5px 0px;
+	max-width:70%;
+	height:auto;
+}
+
+.gezhongsz > button {
+	width:20%;
+	height:80px;
+	margin-bottom: 10px;
+}
+
+.gezhongsz > button + button{
+	margin-left: 20px;
+}
+
+/* .button-wrap-self {
+    padding: 5%;
+}
+
+.ulli > li + li{
+		margin-left: 10%;
+} */
+
+/* 手机 */
+@media (max-width: 767px) {
+   .navSys{
+		height:50px;
+	}
+	
+	.navSys li{
+		float:left;
+	}
+	
+	.navbar{
+		min-height: 10px;
+		height:40px;
+	}
+	
+	.navbar-nav>li>a{
+		margin-top: -10px;
+	}
+	.addJilian{
+		display: none;
+	}
+	#szgzbtn button{
+		width:30%;
+		padding-left: 1px;
+	}
+	/* #alladmin{
+		margin-right: -50px;
+	} */
+}
+/* 平板 */
+/* @media (min-width: 768px) and (max-width: 991px) {
+  	.buttonsize{
+		width:100px;
+		line-height: 100px;
+	    height: 100px;
+	    padding: 0;
+	    border-width: 1.5px;
+	    font-size: 15px; 
+	}
+} */
+/* 电脑 */
+/* @media (min-width: 992px) and (max-width: 1199px) {
+  	.buttonsize{
+		width:100px;
+		line-height: 100px;
+	    height: 100px;
+	    padding: 0;
+	    border-width: 1.5px;
+	    font-size: 15px; 
+	}
+}
+@media (min-width: 1200px) {
+ 	.buttonsize{
+		width:100px;
+		line-height: 100px;
+	    height: 100px;
+	    padding: 0;
+	    border-width: 1.5px;
+	    font-size: 15px; 
+	} 
+}  */

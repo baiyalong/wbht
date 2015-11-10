@@ -1,0 +1,104 @@
+.dl-horizontal dd{
+	margin-bottom: 10px;
+}
+
+.dl-horizontal dt{
+	margin-top: 5px;
+	font-family: "微软雅黑";
+}
+
+.afterTitle{
+	color:red;
+	font-weight: bolder;
+}
+
+/* 手机 */
+@media (max-width: 767px) {
+   .htTable th{
+		width: 12%;
+	}
+	
+	.htTable td{
+		width: 88%;
+	}
+	
+	/* .yierjiCaidan{
+		width:90%;
+	}
+	
+	
+	.erjijiedian{
+		margin-left:5%;
+	}
+	
+	.addAndSearch{
+		margin-top:2%;
+		margin-left:70%; 
+	} */
+	
+} 
+/* 平板 */
+@media (min-width: 768px) and (max-width: 991px) {
+  	.htTable th{
+	width: 8%;
+	}
+	
+	.htTable td{
+		width: 92%;
+	}
+	
+	/* .addAndSearch i{
+		font-size: 20px;
+	}
+	
+	.yierjiCaidan{
+		float: left;
+		width:80%;
+	} */
+} 
+/* 电脑 */
+@media (min-width: 992px) and (max-width: 1199px) {
+  	.htTable th{
+		width: 8%;
+	}
+	
+	.htTable td{
+		width: 92%;
+	}
+	
+	/* .addAndSearch i{
+		font-size: 20px;
+	}
+	
+	.yierjiCaidan{
+		float: left;
+		width:80%;
+	} */
+}
+@media (min-width: 1200px) {
+ 	.htTable th{
+		width: 8%;
+	}
+	
+	.htTable td{
+		width: 92%;
+	}
+	
+	/* .addAndSearch i{
+		font-size: 20px;
+	}
+	
+	.yierjiCaidan{
+		float: left;
+		width:80%;
+	} */
+}
+/*
+用于table中的换行操作
+*/
+table{
+	table-layout:fixed;
+}
+td{
+	word-wrap:break-word;
+}

@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>
+  <!-- <session-config>
+	<session-timeout>1</session-timeout>
+  </session-config> -->
+  
+  <listener>
+  	<listener-class>
+  		com.tridiots.listener.Log4jInit
+  	</listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditPassServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.EditPassServlet</servlet-class>
+  </servlet>
+  
+  <!-- superAdmin的servlte -->
+  <servlet>
+    <servlet-name>IsRepeateCompanyNameServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.superAdmin.IsRepeateCompanyNameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>IsRepeateAdminAcount</servlet-name>
+    <servlet-class>com.tridiots.servlet.superAdmin.IsRepeateAdminAcount</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddAdminServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.superAdmin.AddAdminServlet</servlet-class>
+  </servlet>
+  
+  <!-- admin的servlte -->
+  <servlet>
+    <servlet-name>IsRepeateWorkerAcountServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.admin.IsRepeateWorkerAcountServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddWorkerServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.admin.AddWorkerServlet</servlet-class>
+  </servlet>
+  
+  <!-- 法规库的servlet -->
+  <servlet>
+    <servlet-name>ListAllFaguiServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.faGuiKu.ListAllFaguiServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddFaguiServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.faGuiKu.AddFaguiServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UploadFileServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.faGuiKu.UploadFileServlet</servlet-class>
+  </servlet>
+  
+  <!-- 案例库的servlet -->
+  <servlet>
+    <servlet-name>ListAnliServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.anliku.ListAnliServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddAnliServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.anliku.AddAnliServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListSousuoAnliServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.anliku.ListSousuoAnliServlet</servlet-class>
+  </servlet>
+  
+  <!-- 税种的servlet -->
+  <servlet>
+    <servlet-name>ListTaxTypeServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.taxType.ListTaxTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddTaxTypeServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.taxType.AddTaxTypeServlet</servlet-class>
+  </servlet>
+  <!-- 合同控税的servlet -->
+  <servlet>
+    <servlet-name>AddHtServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.ht.AddHtServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListHTServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.ht.ListHTServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListJcsServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.jcs.ListJcsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddJcsServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.jcs.AddJcsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteAnliServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.anliku.DeleteAnliServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateAnliServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.anliku.UpdateAnliServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateFaguiServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.faGuiKu.UpdateFaguiServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteFaguiServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.faGuiKu.DeleteFaguiServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteHtServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.ht.DeleteHtServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteJcsServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.jcs.DeleteJcsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindHtAndTaxByIdServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.ht.FindHtAndTaxByIdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditHtServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.ht.EditHtServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindJcsAndTaxByIdServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.jcs.FindJcsAndTaxByIdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditJcsServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.jcs.EditJcsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListHTByJilianServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.ht.ListHTByJilianServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListJcsByJilianServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.jcs.ListJcsByJilianServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListTaxTypeByJilianServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.taxType.ListTaxTypeByJilianServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteTaxServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.taxType.DeleteTaxServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindTaxByIdServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.taxType.FindTaxByIdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditTaxServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.taxType.EditTaxServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindAnliByIdServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.anliku.FindAnliByIdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditAlkServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.anliku.EditAlkServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindFaguiByIdServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.faGuiKu.FindFaguiByIdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditFaguiServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.faGuiKu.EditFaguiServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddJilianServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.superAdmin.AddJilianServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindNumServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.admin.FindNumServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ViewAnliContentServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.anliku.ViewAnliContentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>IsRepeateJilianServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.superAdmin.IsRepeateJilianServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListAdminServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.superAdmin.ListAdminServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateLimitNumberServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.superAdmin.UpdateLimitNumberServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListAllJilianNodeServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.superAdmin.ListAllJilianNodeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateJilianServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.superAdmin.UpdateJilianServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteJilianServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.superAdmin.DeleteJilianServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DownloadFileServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.faGuiKu.DownloadFileServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ViewFgtwContentServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.faGuiKu.ViewFgtwContentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteYgServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.superAdmin.DeleteYgServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteYgxServlet</servlet-name>
+    <servlet-class>com.tridiots.servlet.superAdmin.DeleteYgxServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/UserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditPassServlet</servlet-name>
+    <url-pattern>/EditPassServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IsRepeateCompanyNameServlet</servlet-name>
+    <url-pattern>/IsRepeateCompanyNameServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IsRepeateAdminAcount</servlet-name>
+    <url-pattern>/IsRepeateAdminAcount</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddAdminServlet</servlet-name>
+    <url-pattern>/AddAdminServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IsRepeateWorkerAcountServlet</servlet-name>
+    <url-pattern>/IsRepeateWorkerAcountServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddWorkerServlet</servlet-name>
+    <url-pattern>/AddWorkerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListAllFaguiServlet</servlet-name>
+    <url-pattern>/ListAllFaguiServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddFaguiServlet</servlet-name>
+    <url-pattern>/AddFaguiServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadFileServlet</servlet-name>
+    <url-pattern>/UploadFileServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListAnliServlet</servlet-name>
+    <url-pattern>/ListAnliServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddAnliServlet</servlet-name>
+    <url-pattern>/AddAnliServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListSousuoAnliServlet</servlet-name>
+    <url-pattern>/ListSousuoAnliServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListTaxTypeServlet</servlet-name>
+    <url-pattern>/ListTaxTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddTaxTypeServlet</servlet-name>
+    <url-pattern>/AddTaxTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddHtServlet</servlet-name>
+    <url-pattern>/AddHtServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListHTServlet</servlet-name>
+    <url-pattern>/ListHTServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListJcsServlet</servlet-name>
+    <url-pattern>/ListJcsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddJcsServlet</servlet-name>
+    <url-pattern>/AddJcsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteAnliServlet</servlet-name>
+    <url-pattern>/DeleteAnliServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateAnliServlet</servlet-name>
+    <url-pattern>/UpdateAnliServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateFaguiServlet</servlet-name>
+    <url-pattern>/UpdateFaguiServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteFaguiServlet</servlet-name>
+    <url-pattern>/DeleteFaguiServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteHtServlet</servlet-name>
+    <url-pattern>/DeleteHtServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteJcsServlet</servlet-name>
+    <url-pattern>/DeleteJcsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindHtAndTaxByIdServlet</servlet-name>
+    <url-pattern>/FindHtAndTaxByIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditHtServlet</servlet-name>
+    <url-pattern>/EditHtServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindJcsAndTaxByIdServlet</servlet-name>
+    <url-pattern>/FindJcsAndTaxByIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditJcsServlet</servlet-name>
+    <url-pattern>/EditJcsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListHTByJilianServlet</servlet-name>
+    <url-pattern>/ListHTByJilianServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListJcsByJilianServlet</servlet-name>
+    <url-pattern>/ListJcsByJilianServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListTaxTypeByJilianServlet</servlet-name>
+    <url-pattern>/ListTaxTypeByJilianServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteTaxServlet</servlet-name>
+    <url-pattern>/DeleteTaxServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindTaxByIdServlet</servlet-name>
+    <url-pattern>/FindTaxByIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditTaxServlet</servlet-name>
+    <url-pattern>/EditTaxServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindAnliByIdServlet</servlet-name>
+    <url-pattern>/FindAnliByIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditAlkServlet</servlet-name>
+    <url-pattern>/EditAlkServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindFaguiByIdServlet</servlet-name>
+    <url-pattern>/FindFaguiByIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditFaguiServlet</servlet-name>
+    <url-pattern>/EditFaguiServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddJilianServlet</servlet-name>
+    <url-pattern>/AddJilianServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindNumServlet</servlet-name>
+    <url-pattern>/FindNumServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewAnliContentServlet</servlet-name>
+    <url-pattern>/ViewAnliContentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IsRepeateJilianServlet</servlet-name>
+    <url-pattern>/IsRepeateJilianServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListAdminServlet</servlet-name>
+    <url-pattern>/ListAdminServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateLimitNumberServlet</servlet-name>
+    <url-pattern>/UpdateLimitNumberServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListAllJilianNodeServlet</servlet-name>
+    <url-pattern>/ListAllJilianNodeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateJilianServlet</servlet-name>
+    <url-pattern>/UpdateJilianServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteJilianServlet</servlet-name>
+    <url-pattern>/DeleteJilianServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownloadFileServlet</servlet-name>
+    <url-pattern>/DownloadFileServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewFgtwContentServlet</servlet-name>
+    <url-pattern>/ViewFgtwContentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteYgServlet</servlet-name>
+    <url-pattern>/DeleteYgServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteYgxServlet</servlet-name>
+    <url-pattern>/DeleteYgxServlet</url-pattern>
+  </servlet-mapping>
+ 
+
+  <welcome-file-list>
+    <welcome-file>userLogin.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

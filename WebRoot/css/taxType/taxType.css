@@ -1,0 +1,78 @@
+body { 
+	padding-top: 70px; 
+	
+}
+
+.fisrtNav li>a>span{
+	color:white;
+}
+
+.dl-horizontal dd{
+	margin-bottom: 10px;
+}
+
+.dl-horizontal dt{
+	margin-top: 5px;
+	font-family: "微软雅黑";
+}
+
+
+/* 手机 */
+@media (max-width: 767px) {
+   .taxTypeTable th{
+		width: 12%;
+	}
+	
+	.taxTypeTable td{
+		width: 88%;
+	}
+	.navzhuxiao{
+		float:left;
+	}
+} 
+/* 平板 */
+@media (min-width: 768px) and (max-width: 991px) {
+  	.taxTypeTable th{
+	width: 12%;
+	}
+	
+	.taxTypeTable td{
+		width: 88%;
+	}
+	
+	.fisrtNav>li>a{
+		padding-top: 15px;
+		padding-left: 7px;
+		padding-right: 1px;
+		font-family: 微软雅黑;
+	}
+	
+	
+}
+
+/* 电脑 */
+@media (min-width: 992px) and (max-width: 1199px) {
+  	.taxTypeTable th{
+		width: 12%;
+	}
+	
+	.taxTypeTable td{
+		width: 88%;
+	}
+}
+@media (min-width: 1200px) {
+ 	.taxTypeTable th{
+		width: 12%;
+	}
+	
+	.taxTypeTable td{
+		width: 88%;
+	}
+}
+table{
+	table-layout:fixed;
+}
+td{
+	word-wrap:break-word;
+}
+

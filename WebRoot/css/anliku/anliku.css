@@ -1,0 +1,85 @@
+.addAndSearch{
+	margin-left:85%;
+}
+.addAndSearch>a+a{
+	margin-left: 25%;
+}
+
+.dl-horizontal dd{
+	margin-bottom: 10px;
+}
+
+.dl-horizontal dt{
+	margin-top: 5px;
+	font-family: "微软雅黑";
+}
+
+/* 手机 */
+@media (max-width: 767px) {
+   .anliTable th{
+		width: 12%;
+	}
+	
+	.anliTable td{
+		width: 88%;
+	}
+	
+	#addAnli{
+		display: none;
+	}
+	#sousuo{
+		width:100%;
+	}
+	
+} 
+/* 平板 */
+@media (min-width: 768px) and (max-width: 991px) {
+  	.anliTable th{
+		width: 8%;
+	}
+	
+	.anliTable td{
+		width: 92%;
+	}
+	.addAndSearch i{
+		font-size: 20px;
+	}
+	#addAnli{
+		display: none;
+	}
+	#sousuo{
+		width:100%;
+	}
+} 
+/* 电脑 */
+@media (min-width: 992px) and (max-width: 1199px) {
+  	.anliTable th{
+		width: 8%;
+	}
+	
+	.anliTable td{
+		width: 92%;
+	}
+	.addAndSearch i{
+		font-size: 20px;
+	}
+}
+@media (min-width: 1200px) {
+ 	.anliTable th{
+		width: 8%;
+	}
+	
+	.anliTable td{
+		width: 92%;
+	}
+	.addAndSearch i{
+		font-size: 20px;
+	}
+}
+
+table{
+	table-layout:fixed;
+}
+td{
+	word-wrap:break-word;
+}
