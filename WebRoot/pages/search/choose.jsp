@@ -484,7 +484,7 @@
 			////////////导航条//////////////
 			$('.ssNav').hide();
 			//////////////////////////////
-			var servletpath = "/alidata/server/tomcat-7.0.54/webapps/wbht/fileupload/";
+			var servletpath = "/usr/share/tomcat/webapps/wbht/fileupload/";
 			var zh = '<%=acountnumber %>';
 			var companyName = '<%=companyName %>';
 			var usertype = '<%=usertype %>';

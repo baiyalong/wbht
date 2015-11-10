@@ -1,2 +1,6 @@
 eclipse.preferences.version=1
 encoding//WebRoot/pages/common/navbar.jsp=UTF-8
+encoding//src/com/tridiots/listener/Log4jInit.java=UTF-8
+encoding//src/com/tridiots/servlet/UserServlet.java=UTF-8
+encoding/<project>=UTF-8
+separateDerivedEncodings=true

@@ -771,7 +771,7 @@
 						var companyName = '<%=companyName %>';
 						var usertype = '<%=usertype %>';
 						//var servletpath = "D:/Java/workspaceMyEclipse10/.metadata/.me_tcat/webapps/wbht/";
-						var servletpath = "/alidata/server/tomcat-7.0.54/webapps/wbht/fileupload/";
+						var servletpath = "/usr/share/tomcat/webapps/wbht/fileupload/";
 						//-alidata-server-tomcat-7.0.54-webapps-wbht-fileupload-io盘
 						///////////////////权限问题开始/////////////////////
 						if(usertype=="worker")
