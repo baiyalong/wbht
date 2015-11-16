@@ -389,38 +389,38 @@
 				var companyName = '<%=companyName %>';
 				var usertype = '<%=usertype %>'; --%>
 				var fgqwFileNameTime = fgwh+extName;
-				alert(fgqwFileNameTime);
+				//alert(fgqwFileNameTime);
 				//alert(zh+"--"+companyName+"-->"+usertype);
 				if(fgwh=="")
 				{
 					alert("法规文号必须输入，否则不能保存");
 					return false;//阻止模态框关闭
 				}
-				else if(fgtw=="")
-				{
-					alert("法规条文必须输入，否则不能保存");
-					return false;
-				}
-				else if(fgqwFileName=="")
-				{
-					alert("文件必须上传，否则不能保存");
-					return false;
-				}
-				else if(sydqn==null)
-				{
-					alert("适用地区必须选择，否则不能保存");
-					return false;
-				}
-				else if(sz==null)
-				{
-					alert("税种必须选择，否则不能保存");
-					return false;
-				}
-				else if(gjc=="")
-				{
-					alert("关键词必须输入，否则不能保存");
-					return false;
-				}
+// 				else if(fgtw=="")
+// 				{
+// 					alert("法规条文必须输入，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(fgqwFileName=="")
+// 				{
+// 					alert("文件必须上传，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(sydqn==null)
+// 				{
+// 					alert("适用地区必须选择，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(sz==null)
+// 				{
+// 					alert("税种必须选择，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(gjc=="")
+// 				{
+// 					alert("关键词必须输入，否则不能保存");
+// 					return false;
+// 				}
 				else
 				{
 					addFlag = true;
