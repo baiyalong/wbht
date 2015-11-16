@@ -115,7 +115,7 @@ function loadAllFagui (start, limit, init,gjc_sousuo,sz_sousuo,fgwh_sousuo,zh,co
                      	
                      	$tr_content.append($th_content_temp);
                      	$tr_content.append($td_content_temp);
-                     	if(content[i].content.indexOf('.doc')==-1)
+                     	if(content[i].content.indexOf('.doc')!=-1)
                      	$table_temp.append($tr_content);
                      	
                      	var $tr_area = $('<tr></tr>');
