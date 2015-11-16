@@ -120,8 +120,8 @@ function loadAllFagui (start, limit, init,gjc_sousuo,sz_sousuo,fgwh_sousuo,zh,co
                      	
                      	var $tr_area = $('<tr></tr>');
                      	var $th_area_temp = $("<th>适用地区</th>");
-                     	var $td_area_temp = $("<td>"+content[i].area?content[i].area:''+"</td>");
-                     	console.log(content[i].area)
+                     	var $td_area_temp = $("<td>"+content[i].area+"</td>");
+                     	
                      	$tr_area.append($th_area_temp);
                      	$tr_area.append($td_area_temp);
                      	if(content[i].area)
