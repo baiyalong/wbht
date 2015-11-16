@@ -363,7 +363,7 @@ function loadHt(start, limit, init, gjc, htlx, yaodian, gslx,zh,companyName,user
              	if(content[i].htlx!=""&&content[i].htlx!=null)
              	{
 	             	var $tr_fgnumber = $('<tr></tr>');
-	             	var $th_fgnumber_temp = $("<th>合同类型</th>");
+	             	var $th_fgnumber_temp = $("<th>标题</th>");
 	             	var $td_fgnumber_temp = $("<td>"+content[i].htlx+"</td>");
 	             	
 	             	$tr_fgnumber.append($th_fgnumber_temp);
@@ -401,6 +401,7 @@ function loadHt(start, limit, init, gjc, htlx, yaodian, gslx,zh,companyName,user
 	             	
 	             	$tr_al.append($th_al_temp);
 	             	$tr_al.append($td_al_temp);
+	             	if(content[i].al)
 	             	$table_temp.append($tr_al);
              	}
              	///////////////////
@@ -414,6 +415,7 @@ function loadHt(start, limit, init, gjc, htlx, yaodian, gslx,zh,companyName,user
 	             	
 	             	$tr_fgs.append($th_fgs);
 	             	$tr_fgs.append($td_fgs);
+	             	if(content[i].gslx)
 	             	$table_temp.append($tr_fgs);
              	}
              	////////////////
@@ -425,6 +427,7 @@ function loadHt(start, limit, init, gjc, htlx, yaodian, gslx,zh,companyName,user
 	             	
 	             	$tr_keyword.append($th_keyword_temp);
 	             	$tr_keyword.append($td_keyword_temp);
+	             	if(content[i].keyword)
 	             	$table_temp.append($tr_keyword);
              	}
              	////////////////////////////
@@ -436,6 +439,7 @@ function loadHt(start, limit, init, gjc, htlx, yaodian, gslx,zh,companyName,user
 	             	
 	             	$tr_note.append($th_note_temp);
 	             	$tr_note.append($td_note_temp);
+	             	if(content[i].note)
 	             	$table_temp.append($tr_note);
              	}
              	
@@ -2294,7 +2298,7 @@ function loadHtByJilian(start, limit, init, yijicd, erji,zh,companyName,usertype
              	if(content[i].htlx!=""&&content[i].htlx!=null)
              	{
 	             	var $tr_fgnumber = $('<tr></tr>');
-	             	var $th_fgnumber_temp = $("<th>合同类型</th>");
+	             	var $th_fgnumber_temp = $("<th>标题</th>");
 	             	var $td_fgnumber_temp = $("<td>"+content[i].htlx+"</td>");
 	             	
 	             	$tr_fgnumber.append($th_fgnumber_temp);

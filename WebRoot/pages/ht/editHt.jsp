@@ -101,7 +101,7 @@
 												  			} 
 												  		%>
 								      		  <dd>
-											  <dt>合同类型</dt>
+											  <dt>标题</dt>
 											  <dd><textarea class="form-control htlx">${htDetail.htlx}</textarea></dd>
 											  <dt>要点</dt>
 							  				  <dd><textarea class="form-control yaodian">${htDetail.yaodian}</textarea></dd>

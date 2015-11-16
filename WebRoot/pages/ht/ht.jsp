@@ -198,7 +198,7 @@
 									   </div>
 									 </dd>
 									  
-									  <dt>合同类型</dt>
+									  <dt>标题</dt>
 									  <dd><textarea class="form-control htlxsousuo"></textarea></dd>
 									  <dt>要点</dt>
 									  <dd><textarea class="form-control yaodiansousuo"></textarea></dd>
@@ -292,7 +292,7 @@
 												  		%>
 										      		  </dd>
 										      		  </dl></div> 
-													  <div class="panel-body"><dl class="dl-horizontal"><dt>合同类型</dt> 
+													  <div class="panel-body"><dl class="dl-horizontal"><dt>标题</dt> 
 													  <dd><textarea class="form-control htlx"></textarea></dd> 
 													  <dt>要点</dt> 
 									  				  <dd><textarea class="form-control yaodian"></textarea></dd> 
@@ -834,7 +834,7 @@
 						var bz = $('.bz_add').val();
 						if(htlx=="")
 						{
-							alert("合同类型必须输入，否则不能保存");
+							alert("标题必须输入，否则不能保存");
 							return false;
 						}
 						else if(yaodian=="")
@@ -842,21 +842,21 @@
 							alert("要点必须输入，否则不能保存");
 							return false;
 						}
-						else if(al=="")
-						{
-							alert("案例必须输入，否则不能保存");
-							return false;
-						}
-						else if(gslx==null)
-						{
-							alert("公司类型必须选择，否则不能保存");
-							return false;
-						}
-						else if(gjc=="")
-						{
-							alert("关键词必须输入，否则不能保存");
-							return false;
-						}
+// 						else if(al=="")
+// 						{
+// 							alert("案例必须输入，否则不能保存");
+// 							return false;
+// 						}
+// 						else if(gslx==null)
+// 						{
+// 							alert("公司类型必须选择，否则不能保存");
+// 							return false;
+// 						}
+// 						else if(gjc=="")
+// 						{
+// 							alert("关键词必须输入，否则不能保存");
+// 							return false;
+// 						}
 						else
 						{
 							addFlag = true;

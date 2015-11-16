@@ -896,21 +896,21 @@
 					alert("要点必须输入，否则不能保存");
 					return false;
 				}
-				else if(al=="")
-				{
-					alert("案例必须输入，否则不能保存");
-					return false;
-				}
-				else if(gslx==null)
-				{
-					alert("公司类型必须选择，否则不能保存");
-					return false;
-				}
-				else if(gjc=="")
-				{
-					alert("关键词必须输入，否则不能保存");
-					return false;
-				}
+// 				else if(al=="")
+// 				{
+// 					alert("案例必须输入，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(gslx==null)
+// 				{
+// 					alert("公司类型必须选择，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(gjc=="")
+// 				{
+// 					alert("关键词必须输入，否则不能保存");
+// 					return false;
+// 				}
 				else
 				{
 					addFlag = true;

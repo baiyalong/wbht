@@ -245,26 +245,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					alert("标题必须输入，否则不能保存");
 					return false;
 				}
-				else if(al=="")
-				{
-					alert("案例必须输入，否则不能保存");
-					return false;
-				}
-				else if(gjc=="")
-				{
-					alert("关键词必须输入，否则不能保存");
-					return false;
-				}
-				else if(szn==null)
-				{
-					alert("税种必须选择，否则不能保存");
-					return false;
-				}
-				else if(sydqn==null)
-				{
-					alert("适用地区必须选择，否则不能保存");
-					return false;
-				}
+// 				else if(al=="")
+// 				{
+// 					alert("案例必须输入，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(gjc=="")
+// 				{
+// 					alert("关键词必须输入，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(szn==null)
+// 				{
+// 					alert("税种必须选择，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(sydqn==null)
+// 				{
+// 					alert("适用地区必须选择，否则不能保存");
+// 					return false;
+// 				}
 				else
 				{
 					addFlag = true;

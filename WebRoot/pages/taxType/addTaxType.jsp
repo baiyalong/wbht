@@ -407,26 +407,26 @@
 					alert("标题必须输入，否则不能保存");
 					return false;
 				}
-				else if(al=="")
-				{
-					alert("案例必须输入，否则不能保存");
-					return false;
-				}
-				else if(gjc=="")
-				{
-					alert("关键词必须输入，否则不能保存");
-					return false;
-				}
-				else if(szn==null)
-				{
-					alert("税种必须选择，否则不能保存");
-					return false;
-				}
-				else if(sydqn==null)
-				{
-					alert("适用地区必须选择，否则不能保存");
-					return false;
-				}
+// 				else if(al=="")
+// 				{
+// 					alert("案例必须输入，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(gjc=="")
+// 				{
+// 					alert("关键词必须输入，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(szn==null)
+// 				{
+// 					alert("税种必须选择，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(sydqn==null)
+// 				{
+// 					alert("适用地区必须选择，否则不能保存");
+// 					return false;
+// 				}
 				else
 				{
 					addFlag = true;
@@ -569,31 +569,31 @@
 					alert("法规文号必须输入，否则不能保存");
 					return false;//阻止模态框关闭
 				}
-				else if(fgtw=="")
-				{
-					alert("法规条文必须输入，否则不能保存");
-					return false;
-				}
-				else if(fgqwFileName=="")
-				{
-					alert("文件必须上传，否则不能保存");
-					return false;
-				}
-				else if(sydqn==null)
-				{
-					alert("适用地区必须选择，否则不能保存");
-					return false;
-				}
-				else if(sz==null)
-				{
-					alert("税种必须选择，否则不能保存");
-					return false;
-				}
-				else if(gjc=="")
-				{
-					alert("关键词必须输入，否则不能保存");
-					return false;
-				}
+// 				else if(fgtw=="")
+// 				{
+// 					alert("法规条文必须输入，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(fgqwFileName=="")
+// 				{
+// 					alert("文件必须上传，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(sydqn==null)
+// 				{
+// 					alert("适用地区必须选择，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(sz==null)
+// 				{
+// 					alert("税种必须选择，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(gjc=="")
+// 				{
+// 					alert("关键词必须输入，否则不能保存");
+// 					return false;
+// 				}
 				else
 				{
 					addFlag = true;
@@ -670,41 +670,41 @@
 					alert("筹划点必须输入，否则不能保存");
 					return false;
 				}
-				else if(tj=="")
-				{
-					alert("条件必须输入，否则不能保存");
-					return false;
-				}
-				else if(al=="")
-				{
-					alert("案例必须输入，否则不能保存");
-					return false;
-				}
-				else if(fg=="")
-				{
-					alert("法规必须输入，否则不能保存");
-					return false;
-				}
-				else if(gslx==null)
-				{
-					alert("公司类型必须选择，否则不能保存");
-					return false;
-				}
-				else if(sydq==null)
-				{
-					alert("适用地区必须选择，否则不能保存");
-					return false;
-				}
-				else if(gjc=="")
-				{
-					alert("关键词必须输入，否则不能保存");
-					return false;
-				}
-				else if(sz==null)
-				{
-					alert("税种必须选择，否则不能保存");
-					return false;
-				}
+// 				else if(tj=="")
+// 				{
+// 					alert("条件必须输入，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(al=="")
+// 				{
+// 					alert("案例必须输入，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(fg=="")
+// 				{
+// 					alert("法规必须输入，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(gslx==null)
+// 				{
+// 					alert("公司类型必须选择，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(sydq==null)
+// 				{
+// 					alert("适用地区必须选择，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(gjc=="")
+// 				{
+// 					alert("关键词必须输入，否则不能保存");
+// 					return false;
+// 				}
+// 				else if(sz==null)
+// 				{
+// 					alert("税种必须选择，否则不能保存");
+// 					return false;
+// 				}
 				else
 				{
 					addFlag = true;
