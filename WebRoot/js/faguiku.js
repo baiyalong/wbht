@@ -106,7 +106,7 @@ function loadAllFagui (start, limit, init,gjc_sousuo,sz_sousuo,fgwh_sousuo,zh,co
                      	var $th_content_temp = $("<th>法规全文</th>");
                      	//var $td_content_temp = $("<td><a href="+content[i].content.split("|")[1]+">"+content[i].content.split("|")[0]+"<a></td>");
                      	var $td_content_temp ;
-                     	if(content[i].content)
+                     	if(content[i].content&&content[i].content.trim()!='')
                      		$td_content_temp = $("<td><a href='../../DownloadFileServlet?filename="+content[i].content.split("|")[1]+"'>"+content[i].content.split("|")[0]+"<a></td>");
                      	else
                      		$td_content_temp = $("<td></td>");
