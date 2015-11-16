@@ -100,8 +100,10 @@ function loadAllFagui (start, limit, init,gjc_sousuo,sz_sousuo,fgwh_sousuo,zh,co
                      	$tr_fgtw.append($th_fgtw_temp);
                      	$tr_fgtw.append($td_fgtw_temp);
                      	$tr_fgtw.append($td_fgtw_temp2);
-                     	$table_temp.append($tr_fgtw);
-                     	
+                     	if(content[i].fgtw){
+                     		$table_temp.append($tr_fgtw);
+                     	}
+                     	                     	
                      	var $tr_content = $('<tr></tr>');
                      	var $th_content_temp = $("<th>法规全文</th>");
                      	//var $td_content_temp = $("<td><a href="+content[i].content.split("|")[1]+">"+content[i].content.split("|")[0]+"<a></td>");
@@ -113,6 +115,7 @@ function loadAllFagui (start, limit, init,gjc_sousuo,sz_sousuo,fgwh_sousuo,zh,co
                      	
                      	$tr_content.append($th_content_temp);
                      	$tr_content.append($td_content_temp);
+                     	if(content[i].content.indexOf('.doc')==-1)
                      	$table_temp.append($tr_content);
                      	
                      	var $tr_area = $('<tr></tr>');
@@ -121,6 +124,7 @@ function loadAllFagui (start, limit, init,gjc_sousuo,sz_sousuo,fgwh_sousuo,zh,co
                      	
                      	$tr_area.append($th_area_temp);
                      	$tr_area.append($td_area_temp);
+                     	if(content[i].area)
                      	$table_temp.append($tr_area);
                      	
                      	var $tr_taxtype = $('<tr></tr>');
@@ -129,6 +133,7 @@ function loadAllFagui (start, limit, init,gjc_sousuo,sz_sousuo,fgwh_sousuo,zh,co
                      	
                      	$tr_taxtype.append($th_taxtype_temp);
                      	$tr_taxtype.append($td_taxtype_temp);
+                     	if(content[i].taxtype)
                      	$table_temp.append($tr_taxtype);
                      	
                      	var $tr_keyword = $('<tr></tr>');
@@ -139,6 +144,7 @@ function loadAllFagui (start, limit, init,gjc_sousuo,sz_sousuo,fgwh_sousuo,zh,co
                      	$tr_keyword.append($th_keyword_temp);
                      	$tr_keyword.append($td_keyword_temp);
                      	$tr_keyword.append($td_keyword_temp2);
+                     	if(content[i].keyword)
                      	$table_temp.append($tr_keyword);
                      	
                      	var $tr_note = $('<tr></tr>');
@@ -149,6 +155,7 @@ function loadAllFagui (start, limit, init,gjc_sousuo,sz_sousuo,fgwh_sousuo,zh,co
                      	$tr_note.append($th_note_temp);
                      	$tr_note.append($td_note_temp);
                      	$tr_note.append($td_note_temp2);
+                     	if(content[i].note)
                      	$table_temp.append($tr_note);
                      	
                      	///////////////////////////////////////
