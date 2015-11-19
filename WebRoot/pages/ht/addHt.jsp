@@ -2,8 +2,8 @@
 <%@page import="com.tridiots.dao.impl.HtDAOImpl"%>
 <%@page import="com.tridiots.dao.HtDAO"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<% 
-	String path = request.getContextPath(); 
+<%
+	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";%>
 <!doctype html>
 <html>
@@ -17,19 +17,19 @@
     <link rel="stylesheet" type="text/css" href="<%=path %>/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="<%=path %>/css/jilian.css"/>
   </head>
-  
+
   <body>
-  	
+
   	<div class="container">
     	<!-- 导航条界面开始 -->
 		<%@ include file="../../pages/common/navbar.jsp" %>
 		<!-- 导航条界面结束 -->
-      
+
       		<%
      			 HtDAO htDao = new HtDAOImpl();
      			 List<Node> nodeList = htDao.listNode("合同控税");
-	
-				 int nodeLen = nodeList.size();   
+
+				 int nodeLen = nodeList.size();
      		%>
 			<!-- 增加案例modal开始 -->
 			<div class="modal fade" id="anliModal" tabindex="-1" role="dialog" aria-labelledby="anliModalLabel" aria-hidden="true"  data-backdrop="static">
@@ -39,7 +39,7 @@
 							        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 							        <h4 class="modal-title" id="anliModalLabel">增加案例</h4>
 						      </div>
-						      
+
 						      <div class="modal-body">
 						      	<div class="anli">
 						      		<dl class="dl-horizontal">
@@ -49,14 +49,14 @@
 									  <dd><textarea type="text" class="form-control alDetail" value="" required></textarea></dd>
 									   <dt>关键词</dt>
 									  <dd><input type="text" class="form-control gjcDetail" value=""></dd>
-									  
+
 									  <dt>税种</dt>
 									  <dd>
 									  	<select multiple="multiple" class="form-control al_add szDetail" name="alname">
 									  		<option value="增值税">增值税</option>
 									  		<option value="企业所得税">企业所得税</option>
 									  		<option value="营业税及其附加">营业税及其附加</option>
-											<option value="土地增值税">土地增值税</option>									  		
+											<option value="土地增值税">土地增值税</option>
 									  		<option value="个人所得税">个人所得税</option>
 									  		<option value="房产税">房产税</option>
 									  		<option value="契税">契税</option>
@@ -64,7 +64,7 @@
 									  		<option value="印花税">印花税</option>
 									  	</select>
 									  </dd>
-									  
+
 									  <dt>适用地区</dt>
 									  <dd>
 									  <% String[] dqarea = {"北京","上海","天津","重庆","黑龙江","吉林","辽宁","大连","山东","青岛","河北","内蒙古","新疆","青海","宁夏","甘肃","陕西","山西","河南","湖北","湖南","四川","贵州","云南","西藏","江西","安徽","江苏","浙江","宁波","福建","厦门","广东","深圳","广西","海南"}; %>
@@ -74,19 +74,19 @@
 									  			{
 									  		%>
 									  		<option value="<%=dqarea[i] %>"><%=dqarea[i] %></option>
-									  		<% 
+									  		<%
 									  			}
 									  		 %>
 									  	</select>
 									  </dd>
-									 
+
 									  <dt>备注</dt>
 									  <dd><input type="text" class="form-control bzDetail" value=""></dd>
 									</dl>
-						      		
+
 						      	</div>
 						      </div>
-						      
+
 						      <div class="modal-footer">
 						      	<button type="button" id="confirmAddAnli" class="btn btn-default btn-primary" data-dismiss="modal">确定</button>
 						        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
@@ -95,7 +95,7 @@
 				  </div>
 			</div>
 			<!-- 增加案例modal结束 -->
-			
+
 			 <!-- 增加法规modal开始 -->
 			<div class="modal fade" id="ruleModal" tabindex="-1" role="dialog" aria-labelledby="ruleModalLabel" aria-hidden="true"  data-backdrop="static">
 				  <div class="modal-dialog modal-lg">
@@ -104,7 +104,7 @@
 							        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 							        <h4 class="modal-title" id="ruleModalLabel">增加法规</h4>
 						      </div>
-						      
+
 						      <div class="modal-body">
 						      	<div class="rule">
 						      		<dl class="dl-horizontal">
@@ -116,15 +116,15 @@
 									  <dd>
 										  <div id="uploadify">
 										  	 <button id="uploadify">上传文件hlll</button>
-										  	 
+
 										  	 <div id="fileQueue">
 										  	 </div>
 									       </div>
-									       
-									       
+
+
 									       <!--  <input type="file" name="uploadify" id="uploadify" />
 									        <p>
-									            <a href="javascript:$('#uploadify').uploadifyUpload()">上传</a>| 
+									            <a href="javascript:$('#uploadify').uploadifyUpload()">上传</a>|
 									            <a href="javascript:$('#uploadify').uploadifyClearQueue()">取消上传</a>
 									        </p> -->
 									  </dd>
@@ -137,7 +137,7 @@
 									  			{
 									  		%>
 									  		<option value="<%=dqarea2[i] %>"><%=dqarea2[i] %></option>
-									  		<% 
+									  		<%
 									  			}
 									  		 %>
 									  	</select>
@@ -166,7 +166,7 @@
 										  <label class="btn btn-primary">
 										    <input type="radio" name="options" id="s6" autocomplete="off" value="契税"> 契税
 										  </label>
-										  
+
 										  <label class="btn btn-primary">
 										    <input type="radio" name="options" id="s8" autocomplete="off" value="土地使用税"> 土地使用税
 										  </label>
@@ -174,17 +174,17 @@
 										    <input type="radio" name="options" id="yh" autocomplete="off" value="印花税"> 印花税
 										  </label>
 										</div>
-									  	
+
 									  </dd>
 									  <dt>关键词</dt>
 									  <dd><input type="text" class="form-control gjcFGDetail" value="" name="gjc"></dd>
 									  <dt>备注</dt>
 									  <dd><input type="text" class="form-control bzFGDetail" value="" name="bz"></dd>
 									</dl>
-						      		
+
 						      	</div>
 						      </div>
-						      
+
 						      <div class="modal-footer">
 						      	<button type="button" id="confirmAddRule" class="btn btn-default btn-primary" data-dismiss="modal">确定</button>
 						        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
@@ -193,12 +193,12 @@
 				  </div>
 			</div>
 			<!-- 增加法规modal结束 -->
-			
+
      		<!-- 增加合同modal开始 -->
      		<div style="margin-top:-15px;">
 			<h3 class="text-center" style="color:blue;font-family: 微软雅黑">增加数据</h3>
 						      	<!-- 折叠组件开始 -->
-									  
+
 								  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 										  <div class="panel panel-default">
 										    <div class="panel-heading">
@@ -210,25 +210,25 @@
 										      </h4>
 										    </div>
 										    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel">
-										      <div class="panel-body"> 
-										      	<!-- 主体开始 --> 
-										      		<dl class="dl-horizontal"> 
+										      <div class="panel-body">
+										      	<!-- 主体开始 -->
+										      		<dl class="dl-horizontal">
 										      		  <dt>一级节点</dt>
-										      		  <dd> 
-										      		  	<select class="form-control yiji_add"> 
+										      		  <dd>
+										      		  	<select class="form-control yiji_add">
 										      		  		<%
 										      		  			for(int i=0;i<nodeLen;i++)
 										      		  			{
 										      		  				Node node = nodeList.get(i);
 										      		  		 %>
-													  				<option value="<%=node.getYijinode() %>"><%=node.getYijinode() %></option> 
+													  				<option value="<%=node.getYijinode() %>"><%=node.getYijinode() %></option>
 													  		<%
-													  			} 
-													  		%> 
-													  	</select> 
+													  			}
+													  		%>
+													  	</select>
 										      		  </dd>
 										      		  <dt>二级节点</dt>
-										      		  <dd id="erji_add"> 
+										      		  <dd id="erji_add">
 										      		  	<%
 									      		  			for(int i=0;i<nodeLen;i++)
 									      		  			{
@@ -238,59 +238,59 @@
 									      		  				if(i==0)
 									      		  				{
 									      		  		 %>
-													      		  	<select class="form-control erji_add_<%=i+1 %>"> 
+													      		  	<select class="form-control erji_add_<%=i+1 %>">
 													      		  		<% for(int j=0;j<erLen;j++){ %>
-																  		<option value="<%=erjiNode[j] %>"><%=erjiNode[j] %></option> 
+																  		<option value="<%=erjiNode[j] %>"><%=erjiNode[j] %></option>
 																  		<% }%>
-																  	</select> 
-													  	<% 		
+																  	</select>
+													  	<%
 													  			}
 													  			if(i>=1)
 															  	{ %>
-																  	<select class="form-control erji_add_<%=i+1 %>" style="display: none;"> 
+																  	<select class="form-control erji_add_<%=i+1 %>" style="display: none;">
 													      		  		<% for(int j=0;j<erLen;j++){ %>
-																  		<option value="<%=erjiNode[j] %>"><%=erjiNode[j] %></option> 
+																  		<option value="<%=erjiNode[j] %>"><%=erjiNode[j] %></option>
 																  		<% }%>
-																  	</select> 
+																  	</select>
 															  	<%
 															  	}
-												  			} 
+												  			}
 												  		%>
 										      		  </dd>
-										      		  </dl></div> 
-													  <div class="panel-body"><dl class="dl-horizontal"><dt>标题</dt> 
-													  <dd><textarea class="form-control htlx"></textarea></dd> 
-													  <dt>要点</dt> 
-									  				  <dd><textarea class="form-control yaodian"></textarea></dd> 
-									  				  <dt>案例</dt> 
+										      		  </dl></div>
+													  <div class="panel-body"><dl class="dl-horizontal"><dt>标题</dt>
+													  <dd><textarea class="form-control htlx"></textarea></dd>
+													  <dt>要点</dt>
+									  				  <dd><textarea class="form-control yaodian"></textarea></dd>
+									  				  <dt>案例</dt>
 													  <dd>
 													  	<button id="addAnli" data-toggle="modal" data-target="#anliModal" class="btn btn-primary"><span class='glyphicon glyphicon-plus'></span>&nbsp;&nbsp;增加案例</button>
-													  </dd> 
+													  </dd>
 													  <dd><div class="addAnlizt"></div></dd>
-													  <dt>公司类型</dt> 
-													  <dd> 
-													  	<div class="btn-group gslx_add" data-toggle="buttons"> 
-													  	  <label class="btn btn-primary"> 
+													  <dt>公司类型</dt>
+													  <dd>
+													  	<div class="btn-group gslx_add" data-toggle="buttons">
+													  	  <label class="btn btn-primary">
 														    <input type="radio" name="options1_add" id="qb" autocomplete="off" value="外资、内资、上市"> 全部
 														  </label>
-														  <label class="btn btn-primary"> 
-														    <input type="radio" name="options1_add" id="wz" autocomplete="off" value="外资"> 外资 
-														  </label> 
-														  <label class="btn btn-primary"> 
-														    <input type="radio" name="options1_add" id="nz" autocomplete="off" value="内资"> 内资 
-														  </label> 
-														  <label class="btn btn-primary"> 
-														    <input type="radio" name="options1_add" id="ss" autocomplete="off" value="上市"> 上市 
-														  </label> 
-													   </div> 
-													 </dd>									   
-													  <dt>关键词</dt> 
-													  <dd><input type="text" class="form-control gjc_add" value=""></dd> 
-													  <dt>备注</dt> 
-													  <dd><input type="text" class="form-control bz_add" value=""></dd> 
-												</dl> 
-						      		 
-										      	<!-- 主体结束 --> 
+														  <label class="btn btn-primary">
+														    <input type="radio" name="options1_add" id="wz" autocomplete="off" value="外资"> 外资
+														  </label>
+														  <label class="btn btn-primary">
+														    <input type="radio" name="options1_add" id="nz" autocomplete="off" value="内资"> 内资
+														  </label>
+														  <label class="btn btn-primary">
+														    <input type="radio" name="options1_add" id="ss" autocomplete="off" value="上市"> 上市
+														  </label>
+													   </div>
+													 </dd>
+													  <dt>关键词</dt>
+													  <dd><input type="text" class="form-control gjc_add" value=""></dd>
+													  <dt>备注</dt>
+													  <dd><input type="text" class="form-control bz_add" value=""></dd>
+												</dl>
+
+										      	<!-- 主体结束 -->
 										      </div>
 										    </div>
 										  </div>
@@ -319,7 +319,7 @@
 														  <dd><textarea class="form-control yy_chd3"></textarea></dd>
 														  <dt>条件3</dt>
 														  <dd><textarea class="form-control yy_tj3"></textarea></dd>
-														  
+
 														  <dt>误区</dt>
 														  <dd><textarea class="form-control yy_wq"></textarea></dd>
 														  <dt>风险应对方案</dt>
@@ -365,7 +365,7 @@
 														  <dd><textarea class="form-control qy_chd3"></textarea></dd>
 														  <dt>条件3</dt>
 														  <dd><textarea class="form-control qy_tj3"></textarea></dd>
-														  
+
 														  <dt>误区</dt>
 														  <dd><textarea class="form-control qy_wq"></textarea></dd>
 														  <dt>风险应对方案</dt>
@@ -411,7 +411,7 @@
 														  <dd><textarea class="form-control tdzz_chd3"></textarea></dd>
 														  <dt>条件3</dt>
 														  <dd><textarea class="form-control tdzz_tj3"></textarea></dd>
-														  
+
 														  <dt>误区</dt>
 														  <dd><textarea class="form-control tdzz_wq"></textarea></dd>
 														  <dt>风险应对方案</dt>
@@ -457,7 +457,7 @@
 														  <dd><textarea class="form-control zz_chd3"></textarea></dd>
 														  <dt>条件3</dt>
 														  <dd><textarea class="form-control zz_tj3"></textarea></dd>
-														  
+
 														  <dt>误区</dt>
 														  <dd><textarea class="form-control zz_wq"></textarea></dd>
 														  <dt>风险应对方案</dt>
@@ -502,7 +502,7 @@
 														  <dd><textarea class="form-control q_chd3"></textarea></dd>
 														  <dt>条件3</dt>
 														  <dd><textarea class="form-control q_tj3"></textarea></dd>
-														  
+
 														  <dt>误区</dt>
 														  <dd><textarea class="form-control q_wq"></textarea></dd>
 														  <dt>风险应对方案</dt>
@@ -522,7 +522,7 @@
 										      </div>
 										    </div>
 										  </div>
-										  
+
 										  <div class="panel panel-default">
 										    <div class="panel-heading">
 										      <h4 class="panel-title">
@@ -548,7 +548,7 @@
 														  <dd><textarea class="form-control grsd_chd3"></textarea></dd>
 														  <dt>条件3</dt>
 														  <dd><textarea class="form-control grsd_tj3"></textarea></dd>
-														  
+
 														  <dt>误区</dt>
 														  <dd><textarea class="form-control grsd_wq"></textarea></dd>
 														  <dt>风险应对方案</dt>
@@ -568,7 +568,7 @@
 										      </div>
 										    </div>
 										  </div>
-										  
+
 										  <div class="panel panel-default">
 										    <div class="panel-heading">
 										      <h4 class="panel-title">
@@ -594,7 +594,7 @@
 														  <dd><textarea class="form-control fc_chd3"></textarea></dd>
 														  <dt>条件3</dt>
 														  <dd><textarea class="form-control fc_tj3"></textarea></dd>
-														  
+
 														  <dt>误区</dt>
 														  <dd><textarea class="form-control fc_wq"></textarea></dd>
 														  <dt>风险应对方案</dt>
@@ -614,7 +614,7 @@
 										      </div>
 										    </div>
 										  </div>
-										  
+
 										  <div class="panel panel-default">
 										    <div class="panel-heading">
 										      <h4 class="panel-title">
@@ -640,7 +640,7 @@
 														  <dd><textarea class="form-control tdsy_chd3"></textarea></dd>
 														  <dt>条件3</dt>
 														  <dd><textarea class="form-control tdsy_tj3"></textarea></dd>
-														  
+
 														  <dt>误区</dt>
 														  <dd><textarea class="form-control tdsy_wq"></textarea></dd>
 														  <dt>风险应对方案</dt>
@@ -660,7 +660,7 @@
 										      </div>
 										    </div>
 										  </div>
-										  
+
 										  <div class="panel panel-default">
 										    <div class="panel-heading">
 										      <h4 class="panel-title">
@@ -686,7 +686,7 @@
 														  <dd><textarea class="form-control yh_chd3"></textarea></dd>
 														  <dt>条件3</dt>
 														  <dd><textarea class="form-control yh_tj3"></textarea></dd>
-														  
+
 														  <dt>误区</dt>
 														  <dd><textarea class="form-control yh_wq"></textarea></dd>
 														  <dt>风险应对方案</dt>
@@ -706,35 +706,35 @@
 										      </div>
 										    </div>
 										  </div>
-										  
+
 								  </div>
-									  
-						      	<!-- 折叠组件结束 -->	
-						      
+
+						      	<!-- 折叠组件结束 -->
+
 							      <div class="text-center">
 							      	<button type="button" id="confirmAddHt" class="btn btn-default btn-primary btn-lg">确定</button>
 							        <a type="button" id="quxiaoEdit" class="btn btn-default btn-lg" href="javascript:history.go(-1)">取消</a>
 							      </div>
 						    </div>
 			<!-- 增加合同modal结束 -->
-			
+
 			<!-- 版权说明开始 -->
 			<footer style="text-align: center;margin-top: 20px;">
 	          <%@ include file="../../pages/common/copyright.jsp" %>
 	     	</footer>
 	     	<!-- 版权说明结束 -->
-			
+
 			<%
 		       	UserVO userFaguiKu =  (UserVO)session.getAttribute("userVo");
 		       	String acountnumber = "";
 		       	String companyName = "";
 		       	String usertype = "";
 		        if(userFaguiKu!=null)
-		        { 
+		        {
 		            acountnumber = userFaguiKu.getAcountnumber();
 		            companyName = userFaguiKu.getCompanyName();
 		            usertype = userFaguiKu.getUsertype();
-		             
+
 		        }
 		      %>
      </div> <!-- /container -->
@@ -745,16 +745,16 @@
 	<script src="<%=path %>/js/faguiku.js"></script>
 	<script type="text/javascript" src="<%=path %>/jqueryuploadify3.2/jquery.uploadify.min.js"></script>
 	<script type="text/javascript" src="<%=path %>/js/bootstrap-paginator.min.js"></script>
-	
+
 	<script type="text/javascript">
 		$(function(){
 			//////////////////////////////
 			var zh = '<%=acountnumber %>';
 			var companyName = '<%=companyName %>';
 			var usertype = '<%=usertype %>';
-			
-			
-			
+
+
+
 			/////////////////////////增加法规开始///////////////////////////////
 			var fgqwFileName = "";
 			var extName = "";//后缀名
@@ -762,7 +762,7 @@
 			$('.fgwhDetail').blur(function(){
 				fgwh1 = $('.fgwhDetail').val();// 法规文号,用于上传文件的文件名 //
 			});
-			
+
 			/* 文件上传 */
 			$("#uploadify").uploadify({
                  //开启调试
@@ -818,10 +818,10 @@
 					}
 		        	$("#fileQueue").append("<p>"+file.name+"</P>");
 		            $('#uploadify').uploadify('upload');      //添加这行代码才可以访问servlet上传文件
-		        },  
-                'onUploadStart': function (file) {  
-                    $("#uploadify").uploadify("settings", "formData", fgwh1);  
-                    //在onUploadStart事件中，也就是上传之前，把参数写好传递到后台。  
+		        },
+                'onUploadStart': function (file) {
+                    $("#uploadify").uploadify("settings", "formData", fgwh1);
+                    //在onUploadStart事件中，也就是上传之前，把参数写好传递到后台。
                 } ,
 		        //返回一个错误，选择文件的时候触发
 		        'onSelectError':function(file, errorCode, errorMsg){
@@ -846,22 +846,22 @@
 		        },
 		        //上传到服务器，服务器返回相应信息到data里
 		        'onUploadSuccess':function(file, data, response){
-		         	$('#' + file.id).find('.data').html(' - 完成');  
+		         	$('#' + file.id).find('.data').html(' - 完成');
                 	if(data==1){
                 	alert("上传成功");
                 	}else{
                 	alert("上传失败");
                 	}
                 	//alert(data);
-             
-		            
+
+
 		        }
 		    });
-		 
+
 		    var addFlag = false;//用于看是否可以进行增加操作
 			$('#confirmAddRule').click(function(){
 				var bt = "";/* 标题*/
-				
+
 				if($('#collapseTwo').hasClass('in'))
 				{
 					$('.rule input:first').addClass('btyyfgDetail');
@@ -873,7 +873,7 @@
 					$('.rule input:first').removeClass('btfcfgDetail');
 					$('.rule input:first').removeClass('bttdsyfgDetail');
 					$('.rule input:first').removeClass('btyhfgDetail');
-					
+
 					bt = $('.btyyfgDetail').val()+extName;/* 标题*/
 					$('.addyyfg').append(bt+";");
 				}
@@ -888,7 +888,7 @@
 					$('.rule input:first').removeClass('btfcfgDetail');
 					$('.rule input:first').removeClass('bttdsyfgDetail');
 					$('.rule input:first').removeClass('btyhfgDetail');
-					
+
 					bt = $('.btqyfgDetail').val()+extName;/* 标题*/
 					$('.addqyfg').append(bt+";");
 				}
@@ -903,7 +903,7 @@
 					$('.rule input:first').removeClass('btfcfgDetail');
 					$('.rule input:first').removeClass('bttdsyfgDetail');
 					$('.rule input:first').removeClass('btyhfgDetail');
-					
+
 					bt = $('.bttdzzfgDetail').val()+extName;/* 标题*/
 					$('.addtdzzfg').append(bt+";");
 					//alert(bt+"-->bt");
@@ -920,7 +920,7 @@
 					$('.rule input:first').removeClass('btfcfgDetail');
 					$('.rule input:first').removeClass('bttdsyfgDetail');
 					$('.rule input:first').removeClass('btyhfgDetail');
-					
+
 					bt = $('.btzzfgDetail').val()+extName;/* 标题*/
 					$('.addzzfg').append(bt+";");
 				}
@@ -935,7 +935,7 @@
 					$('.rule input:first').removeClass('btfcfgDetail');
 					$('.rule input:first').removeClass('bttdsyfgDetail');
 					$('.rule input:first').removeClass('btyhfgDetail');
-					
+
 					bt = $('.btqfgDetail').val()+extName;/* 标题*/
 					$('.addqfg').append(bt+";");
 				}
@@ -950,7 +950,7 @@
 					$('.rule input:first').removeClass('btfcfgDetail');
 					$('.rule input:first').removeClass('bttdsyfgDetail');
 					$('.rule input:first').removeClass('btyhfgDetail');
-					
+
 					bt = $('.btgrsdfgDetail').val()+extName;/* 标题*/
 					$('.addgrsdfg').append(bt+";");
 				}
@@ -965,7 +965,7 @@
 					$('.rule input:first').addClass('btfcfgDetail');
 					$('.rule input:first').removeClass('bttdsyfgDetail');
 					$('.rule input:first').removeClass('btyhfgDetail');
-					
+
 					bt = $('.btfcfgDetail').val()+extName;/* 标题*/
 					$('.addfcfg').append(bt+";");
 				}
@@ -980,7 +980,7 @@
 					$('.rule input:first').removeClass('btfcfgDetail');
 					$('.rule input:first').addClass('bttdsyfgDetail');
 					$('.rule input:first').removeClass('btyhfgDetail');
-					
+
 					bt = $('.bttdsyfgDetail').val()+extName;/* 标题*/
 					$('.addtdsyfg').append(bt+";");
 				}
@@ -995,7 +995,7 @@
 					$('.rule input:first').removeClass('btfcfgDetail');
 					$('.rule input:first').removeClass('bttdsyfgDetail');
 					$('.rule input:first').addClass('btyhfgDetail');
-					
+
 					bt = $('.btyhfgDetail').val()+extName;/* 标题*/
 					$('.addyhfg').append(bt+";");
 				}
@@ -1013,46 +1013,46 @@
 					alert("法规文号必须输入，否则不能保存");
 					return false;//阻止模态框关闭
 				}
-				else if(fgtw=="")
-				{
-					alert("法规条文必须输入，否则不能保存");
-					return false;
-				}
-				else if(fgqwFileNameTime=="")
-				{
-					alert("文件必须上传，否则不能保存");
-					return false;
-				}
-				else if(sydqn==null)
-				{
-					alert("适用地区必须选择，否则不能保存");
-					return false;
-				}
-				else if(sz==null)
-				{
-					alert("税种必须选择，否则不能保存");
-					return false;
-				}
-				else if(gjc=="")
-				{
-					alert("关键词必须输入，否则不能保存");
-					return false;
-				}
+				// else if(fgtw=="")
+				// {
+				// 	alert("法规条文必须输入，否则不能保存");
+				// 	return false;
+				// }
+				// else if(fgqwFileNameTime=="")
+				// {
+				// 	alert("文件必须上传，否则不能保存");
+				// 	return false;
+				// }
+				// else if(sydqn==null)
+				// {
+				// 	alert("适用地区必须选择，否则不能保存");
+				// 	return false;
+				// }
+				// else if(sz==null)
+				// {
+				// 	alert("税种必须选择，否则不能保存");
+				// 	return false;
+				// }
+				// else if(gjc=="")
+				// {
+				// 	alert("关键词必须输入，否则不能保存");
+				// 	return false;
+				// }
 				else
 				{
 					addFlag = true;
 				}
-				
+
 				if(addFlag)
 				{
 					addFagui(fgwh,fgtw,sydq,sz,gjc,bz,zh,fgqwFileNameTime,companyName,usertype);
-				}  
+				}
 			});
-			
-			
-			
+
+
+
 			/////////////////////////增加法规结束///////////////////////////////////////
-			
+
 			/////////////////////////增加案例开始/////////////////////
 			var addFlag = false;//用于看是否可以进行增加操作
 			$('#confirmAddAnli').click(function(){
@@ -1069,7 +1069,7 @@
 					$('.anli input:first').removeClass('btfcDetail');
 					$('.anli input:first').removeClass('bttdsyDetail');
 					$('.anli input:first').removeClass('btyhDetail');
-					
+
 					bt = $('.btDetail').val();
 					$('.addAnlizt').append(bt+";");
 				}
@@ -1085,7 +1085,7 @@
 					$('.anli input:first').removeClass('btfcDetail');
 					$('.anli input:first').removeClass('bttdsyDetail');
 					$('.anli input:first').removeClass('btyhDetail');
-					
+
 					bt = $('.btyyDetail').val();/* 标题*/
 					$('.addyyal').append(bt+";");
 				}
@@ -1101,7 +1101,7 @@
 					$('.anli input:first').removeClass('btfcDetail');
 					$('.anli input:first').removeClass('bttdsyDetail');
 					$('.anli input:first').removeClass('btyhDetail');
-					
+
 					bt = $('.btqyDetail').val();/* 标题*/
 					$('.addqyal').append(bt+";");
 				}
@@ -1117,7 +1117,7 @@
 					$('.anli input:first').removeClass('btfcDetail');
 					$('.anli input:first').removeClass('bttdsyDetail');
 					$('.anli input:first').removeClass('btyhDetail');
-					
+
 					bt = $('.bttdzzDetail').val();/* 标题*/
 					$('.addtdzzal').append(bt+";");
 				}
@@ -1133,7 +1133,7 @@
 					$('.anli input:first').removeClass('btfcDetail');
 					$('.anli input:first').removeClass('bttdsyDetail');
 					$('.anli input:first').removeClass('btyhDetail');
-					
+
 					bt = $('.btzzDetail').val();/* 标题*/
 					$('.addzzal').append(bt+";");
 				}
@@ -1149,7 +1149,7 @@
 					$('.anli input:first').removeClass('btfcDetail');
 					$('.anli input:first').removeClass('bttdsyDetail');
 					$('.anli input:first').removeClass('btyhDetail');
-					
+
 					bt = $('.btqDetail').val();/* 标题*/
 					$('.addqal').append(bt+";");
 				}
@@ -1165,7 +1165,7 @@
 					$('.anli input:first').removeClass('btfcDetail');
 					$('.anli input:first').removeClass('bttdsyDetail');
 					$('.anli input:first').removeClass('btyhDetail');
-					
+
 					bt = $('.btgrsdDetail').val();/* 标题*/
 					$('.addgrsdal').append(bt+";");
 				}
@@ -1181,7 +1181,7 @@
 					$('.anli input:first').addClass('btfcDetail');
 					$('.anli input:first').removeClass('bttdsyDetail');
 					$('.anli input:first').removeClass('btyhDetail');
-					
+
 					bt = $('.btfcDetail').val();/* 标题*/
 					$('.addfcal').append(bt+";");
 				}
@@ -1197,7 +1197,7 @@
 					$('.anli input:first').removeClass('btfcDetail');
 					$('.anli input:first').addClass('bttdsyDetail');
 					$('.anli input:first').removeClass('btyhDetail');
-					
+
 					bt = $('.bttdsyDetail').val();/* 标题*/
 					$('.addtdsyal').append(bt+";");
 				}
@@ -1213,24 +1213,24 @@
 					$('.anli input:first').removeClass('btfcDetail');
 					$('.anli input:first').removeClass('bttdsyDetail');
 					$('.anli input:first').addClass('btyhDetail');
-					
+
 					bt = $('.btyhDetail').val();/* 标题*/
 					$('.addyhal').append(bt+";");
 				}
-				
+
 				//$('.addAnlizt').append(bt+";");
 				var al = $('.alDetail').val();/* 案例 */
 				//var sydq = $('.sydq').val();/* 适用地区 */
 				var sydqn = $('.sydq_addDetail').val();
 				var sydq = new String(sydqn);
-				
+
 				//var sz = $('input:radio:checked').val();/* 税种 */
 				var szn = $('.szDetail').val();
 				var sz = new String(szn);
-				
+
 				var gjc = $('.gjcDetail').val();/* 关键词 */
 				var bz = $('.bzDetail').val();/* 备注 */
-				
+
 				if(bt=="")
 				{
 					alert("标题必须输入，否则不能保存");
@@ -1260,28 +1260,28 @@
 				{
 					addFlag = true;
 				}
-				
+
 				if(addFlag)
 				{
-					addAnli(bt,al,sydq,sz,gjc,bz,zh,companyName,usertype); 
+					addAnli(bt,al,sydq,sz,gjc,bz,zh,companyName,usertype);
 				}
-				
-				/* 将单选按钮的样式去除掉，选中状态也去除掉 */				
+
+				/* 将单选按钮的样式去除掉，选中状态也去除掉 */
 				//$('select').val("");
-				 //$('.sz>option').removeClass("active");  
+				 //$('.sz>option').removeClass("active");
 			});
 			/////////////////////////增加案例结束///////////////////////////////
 			var nodeLen = <%=nodeLen%>;
 			var yiji = '<%=nodeList.get(0).getYijinode()%>';
 			$('.yiji_add').click(function(){
-				
+
 				yiji = $('.yiji_add').val();
 				//alert(yiji);
 				<%
 				boolean flag = false;
-				for(int m=0;m<nodeLen&&!flag;m++) 
+				for(int m=0;m<nodeLen&&!flag;m++)
 				{
-				
+
 					String yijinode = nodeList.get(m).getYijinode();
 				%>
 					var yijinode = "<%=yijinode%>";
@@ -1297,21 +1297,21 @@
 				}
 				%>
 			});
-			
+
 			////////////////////////////////////////////////////
 			var addFlag = false;//用于看是否可以进行增加操作
 			$('#confirmAddHt').click(function(){
 				var erji = "<%=nodeList.get(0).getErjinode().split("，")[0]%>";
 				for(var i=1;i<=nodeLen;i++)
-				{   var erjiClass = "erji_add_"+i; 
-					
+				{   var erjiClass = "erji_add_"+i;
+
 					if($('.'+erjiClass).css('display')=="block")
 					{
 						erji = $('.'+erjiClass).val();
 						break;
 					}
 				}
-				
+
 				var htlx = $('.htlx').val();
 				var yaodian = $('.yaodian').val();
 				var al = $('.addAnlizt').text();
@@ -1449,8 +1449,8 @@
 				var yh_wq = $('.yh_wq').val();
 				var yh_fx = $('.yh_fx').val();
 				var yh_fg = $('.addyhfg').text();
-				
-				
+
+
 				addHt(yiji,erji,htlx,yaodian,gslx,gjc,bz,al,zh,companyName,usertype,
 					  yy_chd1,yy_tj1,yy_chd2,yy_tj2,yy_chd3,yy_tj3,yy_al,yy_wq,yy_fx,yy_fg,
 					  qy_chd1,qy_tj1,qy_chd2,qy_tj2,qy_chd3,qy_tj3,qy_al,qy_wq,qy_fx,qy_fg,
@@ -1463,8 +1463,8 @@
 					  yh_chd1,yh_tj1,yh_chd2,yh_tj2,yh_chd3,yh_tj3,yh_al,yh_wq,yh_fx,yh_fg);
 			});
 			/////////////////////////////////////////////////////
-			
-			
+
+
 		});
 	</script>
   </body>
