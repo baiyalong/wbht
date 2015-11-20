@@ -416,7 +416,7 @@ function tdClick(){
 	    //////////////////////////////////////////////////////////////////////////////////////////////////
 }
 	function shortstring(s){
-		if(s.length>70){
+		if(s&&s.length>70){
 			s=s.substr(0,70)+"<a href='javascript:void(0)' onclick='showmore()'> 显示更多</a> ";
 		}
 		return s;
