@@ -169,7 +169,7 @@ function loadAllFagui (start, limit, init,gjc_sousuo,sz_sousuo,fgwh_sousuo,zh,co
                      	
                      	//////////////////删除按钮///////////////////
                      	
-                     	if(((usertype=="admin")&&(content[i].companyName==companyName)&&(content[i].gonghao==zh))||((usertype=="superadmin")&&(content[i].companyName==companyName)))
+                     	if((usertype=="superadmin")||((usertype=="admin")&&(content[i].companyName==companyName)&&(content[i].gonghao==zh))||((usertype=="superadmin")&&(content[i].companyName==companyName)))
                  		{
                      		var $tr_del = $('<tr></tr>');
                          	//注意：这里的delButton仅作为过滤选择器的过滤条件，不可以用该值来操作该按钮,这里按钮的大小有待调整
