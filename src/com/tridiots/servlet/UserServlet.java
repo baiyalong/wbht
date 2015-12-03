@@ -50,18 +50,15 @@ public class UserServlet extends HttpServlet implements Serializable
 			UserVO userVo = userDao.findLogin(user);
 			if(userVo!=null)
 			{
-				if(onlineUserList.getInstance().isOnline(userVo.getId())){
-					session.setAttribute("err", "错误！该用户已登陆！");
-					response.sendRedirect(path+"/userLogin.jsp");
-				}
-				else{
+
+
 					session.setAttribute("userVo", userVo);
 					onlineUserList.getInstance().addUser(userVo.getId(), session.getId());
 					//session.setMaxInactiveInterval(1*60);
 					//只有这一个才可以把session传过去
 					request.getRequestDispatcher("/systemSelect.jsp").forward(request, response);
 					//response.sendRedirect("/"+path+"/systemSelect.jsp");
-				}				
+					
 			}
 			else
 			{
@@ -88,11 +85,7 @@ public class UserServlet extends HttpServlet implements Serializable
 	 */
 	public void landOut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 	{
-		HttpSession session = req.getSession();
-		UserVO userVo = (UserVO)session.getAttribute("userVo");
-		onlineUserList.getInstance().deleteUser(userVo.getId());
-		
-		
+	
 		String path = req.getContextPath();
 		req.getSession().invalidate();
 		req.getRequestDispatcher(path+"/userLogin.jsp").forward(req, resp);
