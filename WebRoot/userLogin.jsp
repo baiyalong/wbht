@@ -67,5 +67,20 @@
     <footer style="text-align: center;margin-top: 20px;">
           <%@ include file="pages/common/copyright.jsp" %>
       </footer>
+      <%
+		String err =  (String)session.getAttribute("err");		
+		
+	%> 
+      <script type="text/javascript">
+		$(function(){
+			var err = <%=err%>;
+			console.log(err)
+			if(err)
+			{
+				alert(err);
+			}
+		
+		});
+	</script>
   </body>
 </html>
